@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;600&display=swap");
+
+:root {
+  --mygreen: rgba(109, 233, 109, 0.632);
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  background-color: #000000e9;
+}
+.App {
+  text-align: center;
+  /* height: 100vh; */
+  display: grid;
+  place-items: center;
+}
+
+.newNote {
+  background-color: #000000e9;
+  border: solid 2px var(--mygreen);
+  border-radius: 7px;
+  width: 40vw;
+  /* height: 20vw; */
+  display: flex;
+  flex-direction: column;
+  padding-top: 3vw;
+  /* margin-top: -15vw; */
+}
+
+.newNote > input,
+.newNote > textarea,
+.newNote > button {
+  margin-left: 2vw;
+  margin-right: 2vw;
+  outline-style: none !important;
+  background-color: #141414b7;
+  border: none;
+  color: whitesmoke;
+  font-size: 1.2vw;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  padding: 0.5vw 1vw 0.5vw 1vw;
+}
+
+.newNote > textarea {
+  height: 9vw;
+}
+
+.newNote > button {
+  margin-top: 2vw;
+  margin-bottom: 1.5vw;
+  color: var(--mygreen);
+}
+
+.newNote > input {
+  margin-bottom: 1.5vw;
+  height: 2.5vw;
+}
+
+label {
+  color: white;
+  font-size: 1vw;
+}
+.tags {
+  margin-bottom: 1vw;
+}
+.tags p {
+  color: white;
+}
+.icon {
+  margin-bottom: -0.2vh;
+}
+.logo,
+.iconLogo {
+  font-size: 3vw;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  color: var(--mygreen);
+}
+.logoParent {
+  text-decoration: none;
+  display: flex;
+}
+.iconLogo {
+  margin-top: 2.8vw;
+}
+.note {
+  border: solid var(--mygreen) 2px;
+  border-radius: 5px;
+  text-align: left;
+  padding: 0px 10px 0px 10px;
+  margin-bottom: 2vw;
+  width: 50vw;
+}
+.note > h3 {
+  color: var(--mygreen);
+}
+.note > p {
+  color: whitesmoke;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  overflow-wrap: break-word;
+}
+.toForm {
+  border: var(--mygreen) solid 0.2vw;
+  border-radius: 10vw;
+  display: flex;
+  height: 2.5vw;
+  width: 9vw;
+  justify-content: center;
+  place-items: center;
+  margin-bottom: 2.5vw;
+}
+.toForm > h3 {
+  font-size: 1.5vw;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  color: var(--mygreen);
+}
+
+.toFormParent {
+  text-decoration: none;
+}
+.delicon {
+  margin-left: 2vw;
+}
+.noData {
+  font-size: 3vw;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  color: var(--mygreen);
+}
+.added,
+.notadded {
+  box-shadow: var(--mygreen) 0px 0px 10px;
+  color: var(--mygreen);
+  width: 10vw;
+  padding: 0 0 0 0;
+  position: absolute;
+  display: inline;
+  font-family: "QuickSand", sans-serif;
+  border-radius: 20px;
+  font-size: 1.6vw;
+  font-weight: bold;
+  display: none;
+}
+.added {
+  margin-top: -41vw;
+  animation: noteadded 2s;
+
+  height: 7vw;
+}
+.tick {
+  font-size: 3vw;
+  margin: 1vw 0 0 0;
+}
+.notadded {
+  color: red;
+  margin-top: -43vw;
+  animation: noteNotAdded 2s;
+  box-shadow: red 0px 0px 10px;
+  height: 8.3vw;
+}
+@keyframes noteadded {
+  0% {
+    margin-top: -41vw;
+  }
+  40% {
+    margin-top: -8.7vw;
+  }
+  60% {
+    margin-top: -8.7vw;
+  }
+  100% {
+    margin-top: -41vw;
+  }
+}
+@keyframes noteNotAdded {
+  0% {
+    margin-top: -43vw;
+  }
+  40% {
+    margin-top: -7vw;
+  }
+  60% {
+    margin-top: -7vw;
+  }
+  100% {
+    margin-top: -43vw;
+  }
+}
